@@ -1,0 +1,26 @@
+# IntelliJ IDEA project files
+.idea/
+*.iml
+*.iws
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor swap / backup / temp files
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+*.log
+*.orig
+*.rej
+
+# Node / JS (if you ever add scripts)
+node_modules/
+npm-debug.log
+
+# Python caches (if using scripts)
+__pycache__/
+*.pyc
