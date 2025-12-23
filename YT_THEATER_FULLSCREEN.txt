@@ -1,0 +1,19 @@
+!==============================
+! MODULE: YT_THEATER_FULLSCREEN
+!==============================
+
+! Hide floating overlays
+www.youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player,.html5-video-player.ytp-fullscreen)>.ytp-overlays-container>.ytp-overlay-bottom-right
+
+! Scale down play & vol
+www.youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player,.html5-video-player.ytp-fullscreen) .ytp-button.ytp-play-button svg:style(transform:scale(.62)!important;)
+
+! Lower btn row
+www.youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player,.html5-video-player.ytp-fullscreen) .ytp-right-controls:style(position:relative!important; top:24px!important;)
+www.youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player,.html5-video-player.ytp-fullscreen) .ytp-left-controls:style(position:relative!important; top:24px!important;)
+
+! Lower progress bar
+www.youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player,.html5-video-player.ytp-fullscreen) .ytp-progress-bar-container:style(position:relative!important; top:54px!important;)
+
+! time display tweaks
+www.youtube.com##:is(ytd-watch-flexy[theater] .html5-video-player,.html5-video-player.ytp-fullscreen) .ytp-time-display:style(font-size:14px!important; opacity:.9!important;)

@@ -1,0 +1,22 @@
+!==============================
+! MODULE: YT_CONTROLS_LAYOUT
+!==============================
+
+! Tweaked play and volume buttons
+www.youtube.com##.ytp-button.ytp-play-button svg:style(transform:scale(.85)!important;)
+www.youtube.com##.ytp-button.ytp-volume-icon svg:style(transform:scale(.77))
+
+! compact volume popover
+www.youtube.com##.ytp-volume-popover:style(transform:translateX(-70%) translateY(88%) rotate(90deg)!important; height:50px!important; width:150px!important;)
+
+! Progress bar & control rows
+www.youtube.com##.ytp-progress-bar-container:style(position:relative!important; top:16px!important;)
+www.youtube.com##.ytp-right-controls:style(position:relative!important; top:5px!important;)
+www.youtube.com##.ytp-left-controls:style(position:relative!important; top:5px!important;)
+
+! Fix left-controls blocking progress bar control
+www.youtube.com##.ytp-left-controls:style(pointer-events:none!important;)
+www.youtube.com##.ytp-left-controls :is(.ytp-button,.ytp-volume-panel):style(pointer-events:auto!important;)
+
+! vol closer to play
+www.youtube.com##.ytp-mute-button:style(margin-left:-14px!important;)
