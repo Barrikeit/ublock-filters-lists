@@ -1,23 +1,18 @@
-!==============================
-! MODULE: YT_UI_CORE
-!==============================
-
-!YT MiniReproductor
-www.youtube.com##.ytp-button.ytp-miniplayer-button
+! -------------------
+! REMOVE YT CONSENT
+! -------------------
 
 ! YT consent
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
 youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
 youtube.com##+js(json-prune, topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+
+! 2021-12-01: When specific videos redirect persistently to consent page try this filter (discussion: https://redd.it/r3ec5x ):
 youtube.com##+js(set, ytInitialData.onResponseReceivedEndpoints, undefined)
+
+! 2021-12-14 YT consent v2 https://github.com/uBlockOrigin/uAssets/issues/7636#issuecomment-992858673
 youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
 youtube.com##+js(json-prune, [].response.overlay.consentBumpV2Renderer topbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer overlay.consentBumpV2Renderer response.overlay.consentBumpV2Renderer)
+
+! 2022-10-16 when navigating directly to #shorts
 youtube.com##+js(set, ytInitialData.desktopTopbar.desktopTopbarRenderer.interstitial.consentBumpV2Renderer, undefined)
-
-! YT login
-youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
-youtube.com##+js(set, ytInitialData.overlay.upsellDialogRenderer.isVisible, false)
-youtube.com##+js(json-prune, [].playerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer)
-
-! remove end cards
-www.youtube.com##.ytp-endscreen-content

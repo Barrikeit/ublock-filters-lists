@@ -1,0 +1,50 @@
+!==============================
+! YT_CLEAN_PLAYER
+!==============================
+
+! Reduces height of Playback line
+youtube.com##.ytp-delhi-modern.ytp-big-mode:not(.ytp-xsmall-width-mode) .ytp-progress-bar-container:style(bottom: 55px !important)
+
+! Reduces placement of Buttons
+youtube.com##.ytp-delhi-modern.ytp-big-mode:not(.ytp-xsmall-width-mode) .ytp-chrome-bottom:style(height: 76px !important)
+
+! Removes Fulscreen quick actions
+www.youtube.com##.html5-video-player .ytp-fullscreen-quick-actions
+
+! Remove "1080p Premium" in the video quality menu
+youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label)
+
+! Removes background on Hover effect on Pause/Play button
+youtube.com##.ytp-delhi-modern .ytp-play-button:hover::after, .ytp-delhi-modern.ytp-big-mode .ytp-play-button:hover::after:style(background-color: transparent !important)
+
+! Removes background on Hover effect on Volume button
+youtube.com##.ytp-delhi-modern.ytp-delhi-horizontal-volume-controls .ytp-volume-area:hover::after:style(background-color: transparent !important)
+
+! Removes background on Hover effect on Time Stamp
+youtube.com##.ytp-delhi-modern .ytp-time-wrapper:not(.ytp-miniplayer-ui *)::after:style(background: transparent !important)
+
+! Removes background on Hover effect on Right-side buttons
+youtube.com##.ytp-delhi-modern .ytp-chrome-controls .ytp-right-controls .ytp-button::before:style(background-color: transparent !important)
+
+! Removes background on the Right-side buttons
+youtube.com##.ytp-delhi-modern .ytp-chrome-controls .ytp-right-controls:style(background: transparent !important)
+
+! Removes Background on the Play/Pause buttons
+youtube.com##.ytp-delhi-modern .ytp-chrome-controls .ytp-button.ytp-play-button:style(background: transparent !important)
+
+! Removes Background on the Volume buttons
+youtube.com##.ytp-delhi-modern .ytp-chrome-controls .ytp-volume-area:style(background: transparent !important)
+
+! Removes Background on the Time Stamp buttons
+youtube.com##.ytp-delhi-modern .ytp-chrome-controls .ytp-time-wrapper:style(background: transparent !important)
+
+! Recover the endscreen suggestions
+youtube.com##.html5-video-player.ended-mode .ytp-fullscreen-grid
+youtube.com##.html5-video-player.ended-mode.ytp-autonav-endscreen-cancelled-state .html5-endscreen:style( display: block !important; )
+youtube.com##.html5-video-player.ytp-fullscreen.ended-mode.ytp-autonav-endscreen-cancelled-state .html5-endscreen:style( top: 48px !important; )
+
+! YT - Endscreen
+! www.youtube.com##.ytp-endscreen-content
+
+! YT - MiniReproductor
+www.youtube.com##.ytp-button.ytp-miniplayer-button

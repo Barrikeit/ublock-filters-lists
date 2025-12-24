@@ -1,0 +1,10 @@
+! -------------------
+! REMOVE YT LOGIN
+! -------------------
+
+! YT login
+youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
+youtube.com##+js(set, ytInitialData.overlay.upsellDialogRenderer.isVisible, false)
+youtube.com##+js(json-prune, [].playerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer)
+! probably this one is also neded, but I cannot reproduce anymore
+! youtube.com##+js(json-prune, auxiliaryUi.messageRenderers.upsellDialogRenderer)
